@@ -7,9 +7,16 @@ module.exports = {
         "sourceType": "script"
     },
 
+    env: {
+        browser: true
+    },
+
     plugins: [
-        "spellcheck"
+        "spellcheck",
+        "compat"
     ],
+
+    extends: ["plugin:compat/recommended"],
 
     rules: {
         "spellcheck/spell-checker": [
