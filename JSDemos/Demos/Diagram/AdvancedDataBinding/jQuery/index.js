@@ -54,7 +54,7 @@ $(function() {
         return {};
     }
     function itemStyleExpr(obj) {
-        let style = { "stroke": "#444444" };
+        var style = { "stroke": "#444444" };
         if(obj.type === "group")
             style["fill"] = "#f3f3f3";
         return style;

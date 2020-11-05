@@ -1,5 +1,5 @@
 function generateDataSource() {
-  let x1, x2, y1, y2, i;
+  var x1, x2, y1, y2, i;
   const ds = [];
   for (i = 0; i < 20; i++) {
     x1 = random(5, 15);

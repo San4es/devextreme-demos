@@ -1,4 +1,4 @@
-const DemoApp = angular.module('DemoApp', ['dx', 'ngSanitize']);
+var DemoApp = angular.module('DemoApp', ['dx', 'ngSanitize']);
 
 DemoApp.controller('DemoController', function($scope) {
     $scope.text = text;

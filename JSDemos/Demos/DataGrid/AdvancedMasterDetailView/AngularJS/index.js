@@ -1,6 +1,6 @@
 var DemoApp = angular.module('DemoApp', ['dx']);
 
-const url = "https://js.devexpress.com/Demos/Mvc/api/DataGridAdvancedMasterDetailView";
+var url = "https://js.devexpress.com/Demos/Mvc/api/DataGridAdvancedMasterDetailView";
 
 DemoApp.controller('DemoController', function DemoController($scope) {
     
@@ -86,7 +86,7 @@ DemoApp.controller("OrdersTabController", function OrdersTabController($scope) {
             displayExpr: "ProductName",
             deferRendering: false,
             onContentReady: function(e) {
-                let firstItem = e.component.option("items[0]");
+                var firstItem = e.component.option("items[0]");
                 if(firstItem) {
                     e.component.option("value", firstItem.ProductID);
                 }

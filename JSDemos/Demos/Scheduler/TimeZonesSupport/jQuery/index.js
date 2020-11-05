@@ -1,14 +1,14 @@
 $(function () {
-    const currentDate = new Date(2021, 4, 25);
+    var currentDate = new Date(2021, 4, 25);
 
-    const getLocations = (date) => {
-        const timeZones = DevExpress.utils.getTimeZones(date);
-        return timeZones.filter((timeZone) => {
+    var getLocations = function(date) {
+        var timeZones = DevExpress.utils.getTimeZones(date);
+        return timeZones.filter(function(timeZone) {
             return locations.indexOf(timeZone.id) !== -1;
         });
     };
 
-    const demoLocations = getLocations(currentDate);
+    var demoLocations = getLocations(currentDate);
 
     var scheduler = $("#scheduler").dxScheduler({
         dataSource: data,
@@ -21,18 +21,18 @@ $(function () {
         editing: {
             allowTimeZoneEditing: true
         },
-        onOptionChanged: (e) => {
+        onOptionChanged: function(e) {
             if(e.name === 'currentDate') {                        
                 locationSwitcher.option('items', getLocations(e.value));
             }
         },
-        onAppointmentFormOpening: (e) => {
-            const form = e.form;
+        onAppointmentFormOpening: function(e) {
+            var form = e.form;
 
-            const startDateTimezoneEditor = form.getEditor('startDateTimeZone');
-            const endDateTimezoneEditor = form.getEditor('endDateTimeZone');
-            const startDateDataSource = startDateTimezoneEditor.option('dataSource');
-            const endDateDataSource = endDateTimezoneEditor.option('dataSource');
+            var startDateTimezoneEditor = form.getEditor('startDateTimeZone');
+            var endDateTimezoneEditor = form.getEditor('endDateTimeZone');
+            var startDateDataSource = startDateTimezoneEditor.option('dataSource');
+            var endDateDataSource = endDateTimezoneEditor.option('dataSource');
 
             startDateDataSource.filter(['id', 'contains', 'Europe']);
             endDateDataSource.filter(['id', 'contains', 'Europe']);
@@ -42,7 +42,7 @@ $(function () {
         }
     }).dxScheduler("instance");
 
-    const locationSwitcher = $("#location-switcher").dxSelectBox({
+    var locationSwitcher = $("#location-switcher").dxSelectBox({
         items: demoLocations,
         displayExpr: "title",
         valueExpr: "id",

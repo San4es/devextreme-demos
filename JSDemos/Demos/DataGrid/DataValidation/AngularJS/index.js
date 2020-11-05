@@ -1,7 +1,7 @@
 var DemoApp = angular.module('DemoApp', ['dx']);
 
 DemoApp.controller('DemoController', function DemoController($scope) {
-    const url = "https://js.devexpress.com/Demos/Mvc/api/DataGridEmployeesValidation";
+    var url = "https://js.devexpress.com/Demos/Mvc/api/DataGridEmployeesValidation";
 
     $scope.dataGridOptions = {
         dataSource: DevExpress.data.AspNet.createStore({

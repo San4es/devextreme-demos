@@ -1,5 +1,5 @@
 $(function(){
-    const url = "https://js.devexpress.com/Demos/Mvc/api/DataGridEmployeesValidation";
+    var url = "https://js.devexpress.com/Demos/Mvc/api/DataGridEmployeesValidation";
 
     $("#gridContainer").dxDataGrid({
         dataSource: DevExpress.data.AspNet.createStore({

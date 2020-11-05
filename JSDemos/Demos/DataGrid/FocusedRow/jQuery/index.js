@@ -63,8 +63,8 @@ $(function(){
             }
         },
         onFocusedRowChanged: function(e) {
-            const taskItem = getTaskDataItem(e.row);
-            const focusedRowKey = e.component.option("focusedRowKey");
+            var taskItem = getTaskDataItem(e.row);
+            var focusedRowKey = e.component.option("focusedRowKey");
             $("#taskSubject").html(taskItem.subject);
             $("#taskDetails").html(taskItem.description);
             $("#taskStatus").html(taskItem.status);

@@ -73,7 +73,7 @@ $(function() {
         text: "Customize Task Tooltip",
         value: true,
         onValueChanged: function (e) {
-            const parentElement = document.getElementsByClassName('dx-gantt-task-edit-tooltip')[0];
+            var parentElement = document.getElementsByClassName('dx-gantt-task-edit-tooltip')[0];
             parentElement.className = 'dx-gantt-task-edit-tooltip';
             e.value ? gantt.option("taskTooltipContentTemplate", getTaskTooltipContentTemplate) 
                     : gantt.option("taskTooltipContentTemplate", undefined);

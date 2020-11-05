@@ -14,7 +14,7 @@ DemoApp.controller('DemoController', function DemoController($scope) {
         onItemContextMenu: function(e) {
             $scope.selectedTreeItem = e.itemData;
 
-            const isProduct = e.itemData.price !== undefined;
+            var isProduct = e.itemData.price !== undefined;
             $scope.contextMenu.option('items[0].visible', !isProduct);
             $scope.contextMenu.option('items[1].visible', !isProduct);
             $scope.contextMenu.option('items[2].visible', isProduct);
@@ -32,24 +32,24 @@ DemoApp.controller('DemoController', function DemoController($scope) {
             $scope.contextMenu = e.component;
         },
         onItemClick: function(e) {
-            let logEntry = '';
+            var logEntry = '';
             switch(e.itemData.id) {
                 case 'expand': {
-                    logEntry = `The '${$scope.selectedTreeItem.text}' group was expanded`;
+                    logEntry = "The " + $scope.selectedTreeItem.text + " group was expanded";
                     $scope.treeView.expandItem($scope.selectedTreeItem.id);
                     break;
                 }
                 case 'collapse': {
-                    logEntry = `The '${$scope.selectedTreeItem.text}' group was collapsed`;
+                    logEntry = "The " + $scope.selectedTreeItem.text + " group was collapsed";
                     $scope.treeView.collapseItem($scope.selectedTreeItem.id);
                     break;
                 }
                 case 'details': {
-                    logEntry = `Details about '${$scope.selectedTreeItem.text}' were displayed`;               
+                    logEntry = "Details about " + $scope.selectedTreeItem.text + " were displayed";
                     break;
                 }
                 case 'copy': {
-                    logEntry = `Information about '${$scope.selectedTreeItem.text}' was copied`;
+                    logEntry = "Information about " + $scope.selectedTreeItem.text + " was copied";
                     break;
                 }
             }

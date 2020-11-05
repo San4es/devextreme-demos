@@ -19,7 +19,7 @@ $(function () {
             if(fileSystemItem.isDirectory)
                 return "../../../../images/thumbnails/folder.svg";
 
-            const fileExtension = fileSystemItem.getFileExtension();
+            var fileExtension = fileSystemItem.getFileExtension();
             switch (fileExtension) {
                 case ".txt":
                     return "../../../../images/thumbnails/doc-txt.svg";

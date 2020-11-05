@@ -83,7 +83,7 @@ function generateResources() {
 
     resources.push({
       id: i,
-      text: `Resource ${i}`,
+      text: "Resource " + i,
       color: color
     });
   }
@@ -99,7 +99,7 @@ function generateAppointments() {
         text: item.text,
         startDate: item.startDate,
         endDate: item.endDate,
-        resourceId
+        resourceId: resourceId
       });
     });
   }

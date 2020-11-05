@@ -16,12 +16,12 @@ $(function(){
                 toggleDropZoneActive(e.dropZoneElement, false);
         },
         onUploaded: function(e) {
-            const file = e.file;
-            const dropZoneText = document.getElementById("dropzone-text");
-            const fileReader = new FileReader();
+            var file = e.file;
+            var dropZoneText = document.getElementById("dropzone-text");
+            var fileReader = new FileReader();
             fileReader.onload = function() {
                 toggleDropZoneActive(document.getElementById("dropzone-external"), false);
-                const dropZoneImage = document.getElementById("dropzone-image");
+                var dropZoneImage = document.getElementById("dropzone-image");
                 dropZoneImage.src = fileReader.result;
             }
             fileReader.readAsDataURL(file);
@@ -62,7 +62,7 @@ $(function(){
     }
 
     function toggleImageVisible(visible) {
-        const dropZoneImage = document.getElementById("dropzone-image");
+        var dropZoneImage = document.getElementById("dropzone-image");
         dropZoneImage.hidden = !visible;
     }
 

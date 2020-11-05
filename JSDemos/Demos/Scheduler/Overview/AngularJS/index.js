@@ -30,17 +30,17 @@ DemoApp.controller('DemoController', function DemoController($scope) {
 
     $scope.markWeekEnd = function (cellData) {
         function isWeekEnd(date) {
-            const day = date.getDay();
+            var day = date.getDay();
             return day === 0 || day === 6;
         }
-        const classObject = {};
+        var classObject = {};
         classObject["employee-" + cellData.groups.employeeID] = true;
         classObject['employee-weekend-' + cellData.groups.employeeID] = isWeekEnd(cellData.startDate);
         return classObject;
     };
 
     $scope.markTraining = function (cellData) {
-        const classObject = {
+        var classObject = {
             "day-cell": true
         };
 

@@ -40,7 +40,7 @@ $(function() {
                 group.appendChild(background)
             }
         },
-        onLegendClick(e) { 
+        onLegendClick: function(e) { 
             e.target.isVisible() ? e.target.hide() : e.target.show();
         }
     });

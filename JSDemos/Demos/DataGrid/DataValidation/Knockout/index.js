@@ -1,7 +1,7 @@
 window.onload = function() {
-    const url = "https://js.devexpress.com/Demos/Mvc/api/DataGridEmployeesValidation";
+    var url = "https://js.devexpress.com/Demos/Mvc/api/DataGridEmployeesValidation";
 
-    const viewModel = {
+    var viewModel = {
         dataGridOptions: {
             dataSource: DevExpress.data.AspNet.createStore({
                 key: "ID",
