@@ -12,6 +12,7 @@
         "prompts": "^2.0.4",
         "systemjs-builder": "^0.15.34",
         "eslint": "5.4.0",
+        "eslint-plugin-compat": "^3.8.0",
         "eslint-plugin-spellcheck": "0.0.10",
         "eslint-plugin-react": "7.14.3",
         "eslint-plugin-vue": "6.0.1",
@@ -44,5 +45,14 @@
     "keywords": [
         "devextreme",
         "devexpress"
+    ],
+    "browserslist": [
+        "last 2 Chrome versions",       
+        "last 2 Firefox versions",
+        "last 2 Safari versions",               
+        "last 2 Opera versions",
+        "IE >= 11",
+        "Android >= 4.4",
+        "iOS >= 9"
     ]
 }

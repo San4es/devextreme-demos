@@ -15,7 +15,7 @@
     today.setHours(11, 35, 0, 0);
     
     instance.option("indicatorTime", new Date(today.setDate(today.getDate() - today.getDay() + 3)));
-    return new Promise(function(resolve) {
+    return new Promise(function(resolve) { // eslint-disable-line compat/compat
         setTimeout(function() {
             instance.scrollToTime(9, 0);
             resolve();

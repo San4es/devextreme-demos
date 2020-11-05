@@ -2,17 +2,21 @@ module.exports = {
 
     root: true,
 
-    env: {
-        "es6": true
+    parserOptions: {
+        "sourceType": "script"
     },
 
-    parserOptions: {
-        "sourceType": "module"
+    env: {
+        es6: true,
+        browser: true
     },
 
     plugins: [
-        "spellcheck"
+        "spellcheck",
+        "compat"
     ],
+
+    extends: ["plugin:compat/recommended"],
 
     rules: {
         "spellcheck/spell-checker": [

@@ -10,8 +10,8 @@
     }
 })(function (dxTreeList) {
     if(!window.$) return;
-
-    return new Promise(function(resolve){
+    
+    return new Promise(function(resolve){ // eslint-disable-line compat/compat
         var instance = dxTreeList.getInstance(document.getElementById("treelist"));
         instance.option("onContentReady", function() {
             resolve();
